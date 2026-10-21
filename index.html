@@ -24,12 +24,11 @@
     <span class="brand-name">Kestrel Fork<small>River Camp</small></span>
   </a>
   <nav class="nav-links" id="navLinks" aria-label="Primary">
-    <a href="#stays">Stays</a>
-    <a href="#days">A day here</a>
+    <a href="#weekend">A weekend here</a>
+    <a href="#sleep">Where you'll sleep</a>
     <a href="#seasons">Seasons</a>
     <a href="#gallery">Gallery</a>
-    <a href="#visit">Visit</a>
-    <a class="btn btn-small" href="#book">Book a stay</a>
+    <a class="btn btn-small btn-outline" href="#book">Plan a visit</a>
   </nav>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
 </header>
@@ -41,143 +40,83 @@
   <img class="hero-img" src="img/hero.jpg" srcset="img/hero-sm.jpg 900w, img/hero.jpg 2000w" sizes="100vw" alt="Evening sun low over a ridge of fir trees in the Cascade foothills" fetchpriority="high">
   <div class="hero-shade"></div>
   <div class="hero-inner">
-    <p class="eyebrow">Oregon Cascades · Open year-round</p>
-    <h1>Where the river forks,<br><em>the quiet starts.</em></h1>
-    <p class="hero-sub">Forty acres of old fir and river meadow, an hour and a half from Eugene. Sleep in a cabin, a restored Airstream, a canvas tipi, or your own van.</p>
-    <form class="quick" id="quick" aria-label="Check availability">
-      <label>Arrive<input type="date" name="in" required></label>
-      <label>Leave<input type="date" name="out" required></label>
-      <label>Stay type
-        <select name="type">
-          <option value="cabin">Fir Cabin</option>
-          <option value="airstream">Airstream</option>
-          <option value="tipi">Canvas Tipi</option>
-          <option value="van">Van &amp; RV site</option>
-          <option value="tent">Tent site</option>
-        </select>
-      </label>
-      <button class="btn" type="submit">See the price</button>
-    </form>
+    <p class="eyebrow">Kestrel Fork River Camp · Oregon Cascades</p>
+    <h1>Remember what <em>quiet</em> sounds like.</h1>
+    <p class="hero-sub">Forty acres of fir, meadow and river. No signal, no schedule. Here&rsquo;s what a weekend feels like.</p>
+    <a class="btn btn-lg" href="#weekend">Walk through a weekend <span aria-hidden="true">↓</span></a>
   </div>
-  <a class="scroll-cue" href="#welcome" aria-label="Scroll down"><span></span></a>
 </section>
 
 <!-- WELCOME -->
 <section class="welcome" id="welcome">
-  <div class="wrap welcome-grid">
+  <div class="wrap">
+    <p class="statement reveal">Two creeks meet here and turn into a swimming river. We built a small camp around that spot&hellip; and then mostly got out of the way.</p>
+    <dl class="facts reveal">
+      <div><dt>40</dt><dd>acres</dd></div>
+      <div><dt>22</dt><dd>places to sleep</dd></div>
+      <div><dt>0.6</dt><dd>miles of river</dd></div>
+      <div><dt>0</dt><dd>bars of signal</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- THE WEEKEND (story) -->
+<section class="story" id="weekend" aria-label="A weekend at Kestrel Fork">
+  <div class="clock" id="clock" aria-hidden="true"><span id="clockDay">Fri</span><b id="clockTime">4:10 pm</b></div>
+
+  <article class="chap" data-day="Fri" data-time="4:10 pm" style="--img:url(img/aerial.jpg)">
+    <div class="chap-card reveal"><p class="chap-time">Friday · 4:10 pm</p><h3>The road gets narrower.</h3><p>Pavement turns to gravel at the red barn. Your phone drops to one bar, then none. Somebody in the car says &ldquo;oh,&rdquo; and nobody answers, because they&rsquo;re all looking at the same trees.</p></div>
+  </article>
+
+  <article class="chap" data-day="Fri" data-time="6:30 pm" style="--img:url(img/camp.jpg)">
+    <div class="chap-card reveal"><p class="chap-time">Friday · 6:30 pm</p><h3>First fire.</h3><p>The ring is already stacked with split fir. Light it badly, laugh about it, light it again. By the time dinner&rsquo;s done, you&rsquo;ve stopped checking for the time.</p></div>
+  </article>
+
+  <article class="chap" data-day="Sat" data-time="7:15 am" style="--img:url(img/mist-camp.jpg)">
+    <div class="chap-card reveal"><p class="chap-time">Saturday · 7:15 am</p><h3>Mist on the meadow.</h3><p>You wake before anyone, boil water, and stand in the doorway holding a cup with both hands. The whole valley is breathing out.</p></div>
+  </article>
+
+  <article class="chap" data-day="Sat" data-time="2:00 pm" style="--img:url(img/river.jpg)">
+    <div class="chap-card reveal"><p class="chap-time">Saturday · 2:00 pm</p><h3>Get on the river.</h3><p>In June it runs fast and white, and a guide will put you in a raft. By August it&rsquo;s a slow green float. Either way, everyone shrieks at the first splash and nobody wants to be first out.</p></div>
+  </article>
+
+  <article class="chap" data-day="Sat" data-time="10:40 pm" style="--img:url(img/stars.jpg)">
+    <div class="chap-card reveal"><p class="chap-time">Saturday · 10:40 pm</p><h3>More stars than you planned for.</h3><p>We&rsquo;re a certified dark-sky site, which means the Milky Way is not a metaphor. Lie back on the meadow. Pick a satellite. Lose it.</p></div>
+  </article>
+
+  <article class="chap" data-day="Sun" data-time="11:00 am" style="--img:url(img/viewpoint.jpg)">
+    <div class="chap-card reveal"><p class="chap-time">Sunday · 11:00 am</p><h3>Nobody wants to leave.</h3><p>Check-out is at eleven. You&rsquo;ll do a slow lap of the site, then another. On the way down the gravel, someone says it: &ldquo;Next month?&rdquo;</p></div>
+  </article>
+</section>
+
+<!-- LEAVE / BRING -->
+<section class="swap">
+  <div class="wrap swap-grid">
     <div class="reveal">
-      <p class="eyebrow dark">Welcome to Kestrel Fork</p>
-      <h2>A small camp, run slowly, on purpose.</h2>
+      <p class="eyebrow dark">The packing list</p>
+      <h2>Leave a few things at home.</h2>
     </div>
-    <div class="reveal">
-      <p class="lead">Two creeks meet here and turn into a swimming river. We built the camp around that spot, with twenty-two sites, nothing crowded, and a lot of dark sky.</p>
-      <p>Every stay comes with a fire ring, a stack of split fir, and access to the bathhouse with real hot showers. Most people arrive Friday and wish they&rsquo;d booked through Monday.</p>
-      <dl class="facts">
-        <div><dt>40</dt><dd>acres of fir &amp; meadow</dd></div>
-        <div><dt>22</dt><dd>stays, never crowded</dd></div>
-        <div><dt>0.6</dt><dd>miles of river frontage</dd></div>
-        <div><dt>4.9</dt><dd>average guest rating</dd></div>
-      </dl>
+    <div class="swap-cols reveal">
+      <div><h4>Leave behind</h4><ul class="strike"><li>Your inbox</li><li>The alarm</li><li>The sound of traffic</li><li>A plan for Saturday</li></ul></div>
+      <div><h4>Bring</h4><ul class="bring"><li>A warm jacket</li><li>Someone you like</li><li>A book you&rsquo;ll read one page of</li><li>An appetite</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- STAYS -->
-<section class="stays" id="stays">
+<!-- WHERE YOU'LL SLEEP -->
+<section class="sleep" id="sleep">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow dark">Places to sleep</p>
-      <h2>Five ways to wake up here.</h2>
-      <p>Rates are per night for the whole stay, not per person. Weekends (Fri &amp; Sat) run a little higher.</p>
-    </div>
-
-    <article class="stay reveal" id="stay-cabin">
-      <div class="stay-photo"><img loading="lazy" src="img/cabin-sm.jpg" srcset="img/cabin-sm.jpg 900w, img/cabin.jpg 2000w" sizes="(max-width:900px) 100vw, 55vw" alt="Wooden Fir Cabin standing among tall conifers"></div>
-      <div class="stay-body">
-        <p class="stay-num">01 · Sleeps up to 4</p>
-        <h3>Fir Cabins</h3>
-        <p>Six hand-built cabins under the old growth, each with a queen bed, bunks, a wood stove, a small kitchen, and a porch built for coffee. Stove is stocked when you arrive.</p>
-        <ul class="chips"><li>Wood stove</li><li>Kitchenette</li><li>Private fire ring</li><li>Dog-friendly</li></ul>
-        <div class="stay-foot"><p class="price"><small>from</small> $189<span>/night</span></p><button class="btn btn-ghost" data-pick="cabin">Reserve a cabin</button></div>
-      </div>
-    </article>
-
-    <article class="stay flip reveal" id="stay-airstream">
-      <div class="stay-photo"><img loading="lazy" src="img/airstream-sm.jpg" srcset="img/airstream-sm.jpg 900w, img/airstream.jpg 2000w" sizes="(max-width:900px) 100vw, 55vw" alt="Restored silver Airstream trailer with a patio umbrella at dusk"></div>
-      <div class="stay-body">
-        <p class="stay-num">02 · Sleeps up to 3</p>
-        <h3>Silverline Airstreams</h3>
-        <p>Four 1960s trailers, polished and rewired, parked on the meadow edge with their own decks. Cedar interiors, a real mattress, and a door that opens to the stars.</p>
-        <ul class="chips"><li>Heat &amp; A/C</li><li>Private deck</li><li>Propane grill</li><li>Meadow view</li></ul>
-        <div class="stay-foot"><p class="price"><small>from</small> $165<span>/night</span></p><button class="btn btn-ghost" data-pick="airstream">Reserve an Airstream</button></div>
-      </div>
-    </article>
-
-    <article class="stay reveal" id="stay-tipi">
-      <div class="stay-photo"><img loading="lazy" src="img/tipi-sm.jpg" srcset="img/tipi-sm.jpg 900w, img/tipi.jpg 2000w" sizes="(max-width:900px) 100vw, 55vw" alt="Glowing canvas tipi among dark trees at night"></div>
-      <div class="stay-body">
-        <p class="stay-num">03 · Sleeps up to 4</p>
-        <h3>Canvas Tipis</h3>
-        <p>Camping with a proper bed. Twelve-foot canvas tipis with wool blankets, lanterns, and a stove for cool nights. Shared bathhouse is a two-minute walk.</p>
-        <ul class="chips"><li>Real beds</li><li>Lantern lit</li><li>Fire ring</li><li>Bedding included</li></ul>
-        <div class="stay-foot"><p class="price"><small>from</small> $128<span>/night</span></p><button class="btn btn-ghost" data-pick="tipi">Reserve a tipi</button></div>
-      </div>
-    </article>
-
-    <div class="stay-pair">
-      <article class="stay-mini reveal" id="stay-van">
-        <img loading="lazy" src="img/van-sm.jpg" alt="Camper van parked by the water with a pop-top raised">
-        <div>
-          <p class="stay-num">04 · Up to 6 people</p>
-          <h3>Van &amp; RV Sites</h3>
-          <p>Level gravel pull-throughs up to 40&nbsp;ft with 30/50-amp hookups, water, and a fire ring. Van-lifers get the river-side row.</p>
-          <div class="stay-foot"><p class="price"><small>from</small> $54<span>/night</span></p><button class="btn btn-ghost" data-pick="van">Reserve a site</button></div>
-        </div>
-      </article>
-      <article class="stay-mini reveal" id="stay-tent">
-        <img loading="lazy" src="img/tent-sm.jpg" alt="Glowing tents in a dark forest at night">
-        <div>
-          <p class="stay-num">05 · Up to 6 people</p>
-          <h3>Tent Sites</h3>
-          <p>Soft, shaded pads in the trees or open meadow, each with a picnic table and fire ring. Walk-in sites have wheelbarrows. Quiet hours at 10.</p>
-          <div class="stay-foot"><p class="price"><small>from</small> $38<span>/night</span></p><button class="btn btn-ghost" data-pick="tent">Reserve a site</button></div>
-        </div>
-      </article>
+      <p class="eyebrow">Where you&rsquo;ll sleep</p>
+      <h2>Five ways to be out there.</h2>
     </div>
   </div>
-</section>
-
-<!-- AMENITIES -->
-<section class="amen">
-  <div class="wrap">
-    <div class="section-head light reveal">
-      <p class="eyebrow">Included with every stay</p>
-      <h2>The small things we didn&rsquo;t skip.</h2>
-    </div>
-    <ul class="amen-grid reveal">
-      <li><svg viewBox="0 0 32 32"><path d="M16 4c3 5 7 8 7 13a7 7 0 0 1-14 0c0-3 2-5 3-7 1 2 2 3 3 3 0-3-1-6 1-9Z"/></svg><h4>Split firewood</h4><p>A fresh bundle at every site, with extra at the camp store.</p></li>
-      <li><svg viewBox="0 0 32 32"><path d="M10 6h8a4 4 0 0 1 4 4v2M10 6v6M10 12h12M13 18v2M17 20v2M21 18v2M9 24v2M15 26v1"/></svg><h4>Hot showers</h4><p>Cedar bathhouse with private stalls, heated floors, and no coin meters.</p></li>
-      <li><svg viewBox="0 0 32 32"><path d="M4 21c4-5 7-5 12 0s8 5 12 0M4 14c4-5 7-5 12 0s8 5 12 0"/></svg><h4>River swimming</h4><p>A gravel beach and a deep green pool at the bottom of the meadow.</p></li>
-      <li><svg viewBox="0 0 32 32"><path d="M6 12a14 14 0 0 1 20 0M10 16a9 9 0 0 1 12 0M14 20a4 4 0 0 1 4 0M16 25h.01"/></svg><h4>Lodge Wi-Fi</h4><p>Strong signal at the lodge, none at your site. Both are features.</p></li>
-      <li><svg viewBox="0 0 32 32"><path d="M10 12h12l-1 14H11L10 12ZM12 12V8h8v4M13 19h6"/></svg><h4>Camp store</h4><p>Coffee, local sourdough, ice, s&rsquo;mores kits, and bug spray.</p></li>
-      <li><svg viewBox="0 0 32 32"><path d="M8 20c0-6 3-10 8-10s8 4 8 10M6 14l3-4M26 14l-3-4M12 24h8"/></svg><h4>Dogs welcome</h4><p>Leashed dogs stay free in sites; $15 per stay in cabins and trailers.</p></li>
-    </ul>
-  </div>
-</section>
-
-<!-- A DAY HERE -->
-<section class="days" id="days">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow dark">A day at Kestrel Fork</p>
-      <h2>Nothing on the schedule, plenty to do.</h2>
-    </div>
-    <div class="day-grid">
-      <figure class="day reveal"><img loading="lazy" src="img/hike-sm.jpg" alt="Hiker with a yellow pack looking over a green mountain valley"><figcaption><span>Morning</span><h4>Walk the ridge</h4><p>Eleven miles of trail start at the lodge. The Kestrel Loop is a two-hour climb with a view of three peaks.</p></figcaption></figure>
-      <figure class="day reveal"><img loading="lazy" src="img/river-sm.jpg" alt="Rafters paddling through white water on a bright river"><figcaption><span>Afternoon</span><h4>Get on the water</h4><p>Guided rafting, tube floats and paddle boards from the river hut, June through September.</p></figcaption></figure>
-      <figure class="day reveal"><img loading="lazy" src="img/fire-sm.jpg" alt="Friends around a campfire under tall trees at night"><figcaption><span>Evening</span><h4>Gather round</h4><p>Fire at sundown, s&rsquo;mores at the lodge porch, and live fiddle on Saturdays in summer.</p></figcaption></figure>
-      <figure class="day reveal"><img loading="lazy" src="img/stars-sm.jpg" alt="Milky way arching over a purple twilight sky"><figcaption><span>Night</span><h4>Look up</h4><p>We&rsquo;re a certified dark-sky site. Borrow a telescope and a red flashlight from the lodge.</p></figcaption></figure>
-    </div>
+  <div class="rail" tabindex="0" aria-label="Places to sleep, scroll sideways">
+    <article class="card"><img loading="lazy" src="img/cabin-sm.jpg" alt="Wooden cabin among tall conifers"><div><h3>Fir Cabins</h3><p>Wood stove, a porch for coffee, and a ceiling of old growth. Six of them, hand-built.</p><p class="meta">Sleeps 4 · from $189 <button data-pick="cabin">Plan this →</button></p></div></article>
+    <article class="card"><img loading="lazy" src="img/airstream-sm.jpg" alt="Restored Airstream trailer at dusk"><div><h3>Silverline Airstreams</h3><p>Polished 1960s trailers on the meadow edge. Cedar inside, stars outside.</p><p class="meta">Sleeps 3 · from $165 <button data-pick="airstream">Plan this →</button></p></div></article>
+    <article class="card"><img loading="lazy" src="img/tipi-sm.jpg" alt="Glowing canvas tipi at night"><div><h3>Canvas Tipis</h3><p>Camping with a proper bed, a lantern, and wool blankets. Glows like a paper lamp.</p><p class="meta">Sleeps 4 · from $128 <button data-pick="tipi">Plan this →</button></p></div></article>
+    <article class="card"><img loading="lazy" src="img/van-sm.jpg" alt="Camper van parked beside the water"><div><h3>Van &amp; RV sites</h3><p>Level pull-throughs by the river, with hookups. Van-lifers get the water-side row.</p><p class="meta">Up to 6 · from $54 <button data-pick="van">Plan this →</button></p></div></article>
+    <article class="card"><img loading="lazy" src="img/tent-sm.jpg" alt="Glowing tents among dark trees"><div><h3>Tent sites</h3><p>Soft pads in the trees or open meadow, each with a fire ring and a view of something.</p><p class="meta">Up to 6 · from $38 <button data-pick="tent">Plan this →</button></p></div></article>
   </div>
 </section>
 
@@ -234,9 +173,9 @@
 <section class="book" id="book">
   <div class="wrap book-grid">
     <div class="book-intro reveal">
-      <p class="eyebrow">Plan your stay</p>
-      <h2>Tell us when. We&rsquo;ll do the rest.</h2>
-      <p>Choose a stay and your dates for an instant estimate. Send the request and we&rsquo;ll confirm within a day, with no payment until you hear from us.</p>
+      <p class="eyebrow">When you&rsquo;re ready</p>
+      <h2>Come see for yourself.</h2>
+      <p>Pick a place and a weekend to see roughly what it costs. Send a request and a real person writes back within a day. No payment until then.</p>
       <ul class="notes">
         <li>Check-in 3 pm · Check-out 11 am</li>
         <li>Weekend stays in cabins &amp; trailers: 2-night minimum</li>
@@ -274,7 +213,7 @@
         <label>Your name<input type="text" id="fName" name="name" autocomplete="name" placeholder="Alex Morgan"></label>
         <label>Email<input type="email" id="fEmail" name="email" autocomplete="email" placeholder="you@example.com"></label>
       </div>
-      <button class="btn btn-wide" type="submit">Request this stay</button>
+      <button class="btn btn-wide" type="submit">Send request</button>
       <p class="fine">Demo site: nothing is sent or charged. Kestrel Fork is a fictional business.</p>
       <div class="sent" id="sent" hidden></div>
     </form>
@@ -328,8 +267,8 @@
       <a class="brand light" href="#top"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 6v9.5M16 15.5 9.5 26M16 15.5 22.5 26" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span class="brand-name">Kestrel Fork<small>River Camp</small></span></a>
       <p class="foot-note">Leave it better than you found it. We follow Leave No Trace principles and run on 100% solar and micro-hydro power.</p>
     </div>
-    <nav aria-label="Footer"><a href="#stays">Stays</a><a href="#days">A day here</a><a href="#seasons">Seasons</a><a href="#book">Book</a><a href="#visit">Visit</a></nav>
-    <form class="news" id="news"><label for="nEmail">Seasonal letter, four a year</label><div><input id="nEmail" type="email" placeholder="Your email" aria-label="Email address"><button class="btn btn-small" type="submit">Join</button></div><p id="nMsg" aria-live="polite"></p></form>
+    <nav aria-label="Footer"><a href="#weekend">A weekend here</a><a href="#sleep">Where you'll sleep</a><a href="#seasons">Seasons</a><a href="#book">Plan a visit</a><a href="#visit">Find us</a></nav>
+    <form class="news" id="news"><label for="nEmail">Four letters a year, from the meadow</label><div><input id="nEmail" type="email" placeholder="Your email" aria-label="Email address"><button class="btn btn-small" type="submit">Join</button></div><p id="nMsg" aria-live="polite"></p></form>
   </div>
   <p class="legal">© 2026 Kestrel Fork River Camp · A fictional campground created as a web design project · Photography from Unsplash contributors</p>
 </footer>

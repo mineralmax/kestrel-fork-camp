@@ -52,6 +52,15 @@
   lb.addEventListener('click', closeLb);
   addEventListener('keydown', e => { if (e.key === 'Escape') { closeLb(); setMenu(false); } });
 
+  /* ---------- story clock ---------- */
+  const clock = $('#clock'), story = $('#weekend');
+  if (clock && 'IntersectionObserver' in window) {
+    const set = c => { $('#clockDay').textContent = c.dataset.day; $('#clockTime').textContent = c.dataset.time; };
+    const cio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) set(e.target); }), { threshold: .55 });
+    $$('.chap').forEach(c => cio.observe(c));
+    new IntersectionObserver(([e]) => clock.classList.toggle('show', e.isIntersecting), { threshold: 0 }).observe(story);
+  }
+
   /* ---------- booking ---------- */
   const STAYS = {
     cabin:     { name: 'Fir Cabin',          rate: 189, cap: 4, clean: 45, pet: 15 },
@@ -72,9 +81,8 @@
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const nf = new Date(today); nf.setDate(nf.getDate() + ((5 - nf.getDay() + 7) % 7 || 7));
   const ns = new Date(nf); ns.setDate(ns.getDate() + 2);
-  [fIn, fOut, $('input[name=in]', $('#quick')), $('input[name=out]', $('#quick'))].forEach(i => i.min = fmt(today));
+  [fIn, fOut].forEach(i => i.min = fmt(today));
   fIn.value = fmt(nf); fOut.value = fmt(ns);
-  $('input[name=in]', $('#quick')).value = fmt(nf); $('input[name=out]', $('#quick')).value = fmt(ns);
 
   const fillGuests = () => {
     const cap = STAYS[fType.value].cap, keep = Math.min(+fGuests.value || 2, cap);
@@ -133,17 +141,6 @@
     if (scroll) $('#book').scrollIntoView({ behavior: 'smooth' });
   };
   $$('[data-pick]').forEach(b => b.addEventListener('click', () => pick(b.dataset.pick)));
-
-  // hero quick form hands off to the booking section
-  $('#quick').addEventListener('submit', e => {
-    e.preventDefault();
-    const f = e.target;
-    if (f.in.value) fIn.value = f.in.value;
-    if (f.out.value && f.out.value > f.in.value) fOut.value = f.out.value;
-    else if (fIn.value) { const d = parse(fIn.value); d.setDate(d.getDate() + 2); fOut.value = fmt(d); }
-    fOut.min = fIn.value;
-    pick(f.type.value);
-  });
 
   // request submit (demo)
   $('#bookForm').addEventListener('submit', e => {
